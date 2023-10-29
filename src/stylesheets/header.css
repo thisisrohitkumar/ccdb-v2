@@ -1,0 +1,161 @@
+header{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px 10px 50px;
+    position: fixed;
+    border-bottom: 1px solid #333;
+}
+
+.logoBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 100px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.desktopMenuIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.desktopMenuIcon i{
+    letter-spacing: 5px;
+}
+
+.searchBox input{
+    font-size: 1.5rem;
+    width: 500px;
+    padding: 8px 15px 8px 15px;
+    border-radius: 10px 0 0 10px;
+}
+
+.searchBox button{
+    font-size: 1.5rem;
+    padding: 8px 15px 8px 15px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+    width: 100px;
+    cursor: pointer;
+}
+
+.userBoxContainer{
+    position: relative;
+}
+
+.userBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: #fff;
+}
+
+.userMenu{
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    display: none;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.userMenu ul{
+    width: 100%;
+}
+
+.userMenu li{
+    list-style: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding: 8px 15px 8px 8px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.userMenu li:hover{
+    background-color: #333;
+    color: #fff;
+}
+
+.userMenu i{
+    margin-right: 10px;
+    width: 15px;
+}
+
+.desktopMenu{
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: all .5s ease;
+    padding: 50px 250px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+}
+.menuHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desktopMenu img{
+    width: 150px;
+}
+
+.hideDesktopMenu i{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+.desktopMenuItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.desktopMenuItems ul li{
+    list-style: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.desktopMenuItems ul li:hover{
+    transform: translateX(10px);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.desktopMenuItems ul li:first-child{
+    color: greenyellow;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    transform: translateX(0);
+    transition: none;
+    cursor: text;
+}
+
