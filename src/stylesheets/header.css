@@ -14,7 +14,6 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    column-gap: 100px;
 }
 
 .logo img{

@@ -30,11 +30,11 @@ const Header = () => {
                     <span className="logo">
                         <img src={logo} alt="CCDb Logo" />
                     </span>
-                    <span className="desktopMenuIcon" onClick={showDesktopMenu}>
-                        <i className="fa-solid fa-bars"></i>
-                        <plaintext>Menu</plaintext>   
-                    </span>
                 </div>
+                <span className="desktopMenuIcon" onClick={showDesktopMenu}>
+                    <i className="fa-solid fa-bars"></i>
+                    <plaintext>Menu</plaintext>   
+                </span>
                 <div className="searchBox">
                     <form>
                         <input type="search" />
