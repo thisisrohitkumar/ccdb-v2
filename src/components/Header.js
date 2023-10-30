@@ -37,7 +37,7 @@ const Header = () => {
                 </span>
                 <div className="searchBox">
                     <form>
-                        <input type="search" />
+                        <input type="search" placeholder="Search your courses here..." />
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                 </div>
@@ -50,6 +50,8 @@ const Header = () => {
                     <span className="userMenu" id="userMenu">
                         <ul>
                             <li><i class="fa-regular fa-address-card"></i> Dashboard</li>
+                            <li><i class="fa-regular fa-floppy-disk"></i> Watchlist</li>
+                            <li><i class="fa-solid fa-star-half-stroke"></i> Your Ratings</li>
                             <li><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
                         </ul>
                     </span>

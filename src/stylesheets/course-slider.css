@@ -1,0 +1,44 @@
+.courseSliderContainer{
+    width: 100vw;
+    height: 80vh;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    column-gap: 20px;
+    padding: 50px 60px 50px 50px;
+}
+
+.courseSlider{
+    flex: 2;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.upcomingCourses{
+    flex: 1;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.upcHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upcHeading em{
+    font-size: 1rem;
+    color: greenyellow;
+}
+
+.upcomingCourses .upc{
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 10px;
+}
