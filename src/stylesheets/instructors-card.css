@@ -1,0 +1,30 @@
+.instructorsCard{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.instructorImgContainer{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.instructorsCard img{
+    width: 200px;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.instructorsCard img:hover{
+    transform: scale(1.2);
+}
+
+.instructorsRating i{
+    color: red;
+}

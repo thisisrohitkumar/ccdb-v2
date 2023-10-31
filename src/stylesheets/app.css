@@ -1,7 +1,12 @@
 @import url(header.css);
 @import url(hero.css);
 @import url(course-slider.css);
+@import url(course-card.css);
+@import url(slider.css);
 @import url(top-ten.css);
+@import url(top-instructors.css);
+@import url(instructors-card.css);
+@import url(footer-course-category.css);
 @import url(footer.css);
 *{
     margin: 0;

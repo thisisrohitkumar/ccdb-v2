@@ -8,6 +8,7 @@ header{
     padding: 10px 50px 10px 50px;
     position: fixed;
     border-bottom: 1px solid #000;
+    z-index: 5;
 }
 
 .logoBox{
@@ -113,6 +114,7 @@ header{
     display: flex;
     flex-direction: column;
     row-gap: 100px;
+    z-index: 6;
 }
 .menuHeader{
     display: flex;

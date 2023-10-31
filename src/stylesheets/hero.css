@@ -42,6 +42,12 @@
 
 .heroImg{
     flex: 1;
+    filter: grayscale(1);
+    transition: all .2s ease;
+}
+
+.heroImg:hover{
+    filter: grayscale(0);
 }
 
 .heroImg img{
