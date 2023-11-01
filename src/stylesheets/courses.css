@@ -1,0 +1,36 @@
+.courseContainer{
+    width: 100%;
+    height: auto;
+    padding: 150px 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.coursePageHeading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coursePageHeading em{
+    cursor: pointer;
+}
+
+.coursePageHeading em i{
+    margin-right: 10px;
+}
+
+.ourTeamHeading h1{
+    font-size: 2.5rem;
+}
+
+.courseCardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}

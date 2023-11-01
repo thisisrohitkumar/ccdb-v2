@@ -5,19 +5,23 @@
     padding: 150px 50px;
     display: flex;
     flex-direction: column;
-    row-gap: 50px;
+    row-gap: 100px;
     color: #000;
 }
 
 .ourTeamHeading{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .ourTeamHeading h2{
     font-size: 2.5rem;
+}
+
+.ourTeamHeading h2 i{
+    color: red;
 }
 
 .ourTeamHeading em{

@@ -1,13 +1,17 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 const FooterCourseCategory = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     return(
         <>
             <div className="footerCourseCategoryContainer">
                 <div className="footerCourseCategoryHeading">
                     <h2>Course Categories</h2>
-                    <em>View all</em>
+                    <em><NavLink to='/courses' className='reset-a'>View all</NavLink></em>
                 </div>
                 <div className="footerCourseCategory">
                     <span>

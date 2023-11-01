@@ -8,7 +8,7 @@ const Footer = () => {
                 <div className="footerMenu">
                     <ul>
                         <li><NavLink className='reset-a' to='/'>Advertising</NavLink></li>
-                        <li><NavLink className='reset-a' to='/'>Privacy Policy</NavLink></li>
+                        <li><NavLink className='reset-a' to='/privacy'>Privacy Policy</NavLink></li>
                         <li><NavLink className='reset-a' to='/'>Site Map</NavLink></li>
                         <li><NavLink className='reset-a' to='/team'>Our Team</NavLink></li>
                     </ul>

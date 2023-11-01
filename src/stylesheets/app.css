@@ -10,6 +10,9 @@
 @import url(footer.css);
 @import url(team.css);
 @import url(team-member-card.css);
+@import url(privacy.css);
+@import url(error404.css);
+@import url(courses.css);
 *{
     margin: 0;
     padding: 0;

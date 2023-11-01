@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import logo from '../resources/assets/images/logo.png'
 
@@ -27,9 +28,11 @@ const Header = () => {
         <>
             <header>
                 <div className="logoBox">
-                    <span className="logo">
-                        <img src={logo} alt="CCDb Logo" />
-                    </span>
+                    <NavLink to='/' className='reset-a'>
+                        <span className="logo">
+                            <img src={logo} alt="CCDb Logo" />
+                        </span>
+                    </NavLink>
                 </div>
                 <span className="desktopMenuIcon" onClick={showDesktopMenu}>
                     <i className="fa-solid fa-bars"></i>
@@ -59,7 +62,7 @@ const Header = () => {
             </header>
             <div className="desktopMenu" id="desktopMenu">
                 <div className="menuHeader">
-                    <img src={logo} alt="CCDb Logo" />
+                    <NavLink to='/' className='reset-a'><img src={logo} alt="CCDb Logo" /></NavLink>
                     <span className="hideDesktopMenu" onClick={hideDesktopMenu}><i class="fa-solid fa-circle-xmark"></i></span>
                 </div>
                 <div className="desktopMenuItems">
@@ -84,7 +87,7 @@ const Header = () => {
                         <li>CCDb Community</li>
                         <li>Help Center</li>
                         <li>Survey Forms</li>
-                        <li>Our Team</li>
+                        <li><NavLink to='/team' className='reset-a'>Our Team</NavLink></li>
                     </ul>
                 </div>
             </div>

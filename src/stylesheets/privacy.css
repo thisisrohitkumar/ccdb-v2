@@ -1,0 +1,16 @@
+.privacyContainer{
+    padding: 150px 50px;
+}
+
+.privacyContainer li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.privacyContainer p{
+    margin-bottom: 50px;
+}
+
+.privacyContainer h2{
+    margin-bottom: 20px;
+}

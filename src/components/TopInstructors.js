@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import InstructorsCard from "./InstructorsCard";
 import ins1 from '../resources/assets/images/instructors/gate.jpg'
 import ins2 from '../resources/assets/images/instructors/love.jpg'
@@ -13,7 +14,7 @@ const TopInstructors = () => {
             <div className="topInstructorsContainer">
                 <div className="topInstructorsHeading">
                     <h2>Most Loved Instructors on CCDb</h2>
-                    <em>View all</em>
+                    <em><NavLink to='/instructors' className='reset-a'>View all</NavLink></em>
                 </div>
                 <div className="topInstructors">
                     <InstructorsCard 

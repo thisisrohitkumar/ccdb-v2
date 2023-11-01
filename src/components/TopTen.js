@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import CourseCard from "./CourseCard";
 import thumb1 from '../resources/assets/images/thumbnails/love-babbar.jpg'
 import thumb2 from '../resources/assets/images/thumbnails/gate-course.jpg'
@@ -7,12 +8,13 @@ import thumb4 from '../resources/assets/images/thumbnails/shraddha-course.jpg'
 import thumb5 from '../resources/assets/images/thumbnails/thapa-course.jpg'
 
 const TopTen = () => {
+
     return(
         <>
             <section className="topTenContainer">
                 <div className="topTenHeading">
                     <h2>Top 5 Courses on CCDb</h2>
-                    <em>View all</em>
+                    <em><NavLink to='/courses' className='reset-a'>View all</NavLink></em>
                 </div>
                 <div className="topTenCourses">
                     <CourseCard
