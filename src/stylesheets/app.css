@@ -13,6 +13,7 @@
 @import url(privacy.css);
 @import url(error404.css);
 @import url(courses.css);
+@import url(course-hero.css);
 *{
     margin: 0;
     padding: 0;

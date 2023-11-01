@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const CourseCard = (props) => {
     return(
@@ -8,7 +9,7 @@ const CourseCard = (props) => {
                 <plaintext className="courseRating"><i class="fa-solid fa-star"> {props.courseRating}</i>/10</plaintext>
                 <plaintext className="courseName">{props.courseName}</plaintext>
                 <plaintext className="courseInstructor">{props.courseInstructor}</plaintext>
-                <button className="viweCourseBtn">View Course</button>
+                <NavLink to='/courses-details' className='reset-a'><button className="viweCourseBtn">View Course</button></NavLink>
             </div>
         </>
     )

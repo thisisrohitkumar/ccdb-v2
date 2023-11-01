@@ -85,8 +85,9 @@ const Header = () => {
                     </ul>
                     <ul className="ccdbCommunity">
                         <li>CCDb Community</li>
-                        <li>Help Center</li>
-                        <li>Survey Forms</li>
+                        <li>About CCDb</li>
+                        <li>Contact Us</li>
+                        <li><a className="reset-a" href="http://ccdb.in/" target="_blank">Survey Form</a></li>
                         <li><NavLink to='/team' className='reset-a'>Our Team</NavLink></li>
                     </ul>
                 </div>
