@@ -1,0 +1,43 @@
+.ourTeamCard{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    background-color: transparent;
+}
+
+.memberImgContainer{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+}
+.memberImgContainer img{
+    width: 200px;
+    border-radius: 50%;
+    transition: all .3s ease;
+}
+
+.memberImgContainer img:hover{
+    transform: scale(1.2);
+}
+.memberLinkedIn{
+    margin-top: 10px;
+}
+
+.memberLinkedIn i{
+    color: rgb(23, 118, 251);
+    font-size: 2rem;
+}
+
+.memberName{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.memberRole{
+    font-style: italic;
+    font-size: 1rem;
+}
