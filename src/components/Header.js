@@ -47,16 +47,18 @@ const Header = () => {
                 <div className="userBoxContainer">
                     <span className="userBox" id="userBox" onClick={showUserMenu}>
                         <i className="fa-solid fa-circle-user"></i>
-                        <plaintext>Username</plaintext>                     
+                        <plaintext className="username">Username</plaintext>                     
                         <i className="fa-solid fa-caret-down" id="caret"></i>
                     </span>
                     <span className="userMenu" id="userMenu">
                         <ul>
                             <li><i class="fa-regular fa-address-card"></i> Dashboard</li>
-                            <li><i class="fa-regular fa-floppy-disk"></i> Watchlist</li>
                             <li><i class="fa-solid fa-star-half-stroke"></i> Your Ratings</li>
                             <li><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
                         </ul>
+                    </span>
+                    <span className="userBox hide">
+                        <NavLink to='/login' className='reset-a clickToLogin'>LogIn / SignUp</NavLink>
                     </span>
                 </div>
             </header>
@@ -68,27 +70,26 @@ const Header = () => {
                 <div className="desktopMenuItems">
                     <ul className="courseCategories">
                         <li>Course Categories</li>
-                        <li>Web Development</li>
-                        <li>UI/UX Design</li>
-                        <li>Android App Development</li>
-                        <li>Programming</li>
-                        <li>Game Developemnt</li>
-                        <li>IT and Software</li>
+                        <li onClick={hideDesktopMenu}>Web Development</li>
+                        <li onClick={hideDesktopMenu}>UI/UX Design</li>
+                        <li onClick={hideDesktopMenu}>Android App Development</li>
+                        <li onClick={hideDesktopMenu}>Programming</li>
+                        <li onClick={hideDesktopMenu}>Game Developemnt</li>
+                        <li onClick={hideDesktopMenu}>IT and Software</li>
                     </ul>
                     <ul className="filterCourses">
-                        <li>Filter Courses</li>
-                        <li>Best Selling</li>
-                        <li>Top Ratings</li>
-                        <li>Recently Launched</li>
-                        <li>Most Watched</li>
-                        <li>Upcoming</li>
+                        <li>Pages</li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/' className='reset-a'>Home</NavLink></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/courses' className='reset-a'>Courses</NavLink></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/instructors' className='reset-a'>Instructors</NavLink></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/team' className='reset-a'>Our Team</NavLink></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/privacy' className='reset-a'>Privacy Policy</NavLink></li>
                     </ul>
                     <ul className="ccdbCommunity">
                         <li>CCDb Community</li>
-                        <li>About CCDb</li>
-                        <li>Contact Us</li>
-                        <li><a className="reset-a" href="http://ccdb.in/" target="_blank">Survey Form</a></li>
-                        <li><NavLink to='/team' className='reset-a'>Our Team</NavLink></li>
+                        <li onClick={hideDesktopMenu}>About CCDb</li>
+                        <li onClick={hideDesktopMenu}>Contact Us</li>
+                        <li onClick={hideDesktopMenu}><a className="reset-a" href="http://ccdb.in/" target="_blank">Survey Form</a></li>
                     </ul>
                 </div>
             </div>
