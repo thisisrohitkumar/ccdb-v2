@@ -36,7 +36,7 @@ Start the server
 
 ## Tech Stack
 
-**Client:** React, Bootstrap
+**Client:** React
 
 **Server:** Node, Express
 
