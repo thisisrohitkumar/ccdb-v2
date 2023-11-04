@@ -1,21 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Search from "../components/Search";
 import logo from "../resources/assets/images/logo.png";
 
-import CourseData from "../rawData/courseData";
-
 const Header = () => {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredData, setFilteredData] = useState([]);
-
-  const handleSearch = (query) => {
-    const filteredResults = CourseData.filter((item) =>
-      item.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredData(filteredResults);
-  };
-
   const showDesktopMenu = () => {
     const desktopMenu = document.getElementById("desktopMenu");
     desktopMenu.style.transform = "translateY(0%)";
@@ -49,29 +37,8 @@ const Header = () => {
           <i className="fa-solid fa-bars"></i>
           <plaintext>Menu</plaintext>
         </span>
-        <div className="searchBox">
-          <div className="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-              type="search"
-              placeholder="Search..."
-              value={searchQuery}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-                handleSearch(e.target.value);
-              }}
-            />
-          </div>
-            <div className="searchResultContainer">
-                {searchQuery && (
-                    <ul>
-                    {filteredData.map((item) => (
-                        <li key={item.id}>{item.name}</li>
-                    ))}
-                    </ul>
-                )}
-            </div>
-        </div>
+
+        <Search />
 
         <div className="userBoxContainer">
           <span className="userBox hide" id="userBox" onClick={showUserMenu}>
@@ -111,13 +78,41 @@ const Header = () => {
         <div className="desktopMenuItems">
           <ul className="courseCategories">
             <li>Course Categories</li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/ai'>AI / ML</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/java'>Java</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/linux'>Linux</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/web'>Web Development</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/ui'>UI/UX Design</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/operating'>Operating System</NavLink></li>
-            <li onClick={hideDesktopMenu}><NavLink className='reset-a' to='/courses/dsa'>Data Structures</NavLink></li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/ai">
+                AI / ML
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/java">
+                Java
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/linux">
+                Linux
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/web">
+                Web Development
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/ui">
+                UI/UX Design
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/operating">
+                Operating System
+              </NavLink>
+            </li>
+            <li onClick={hideDesktopMenu}>
+              <NavLink className="reset-a" to="/courses/dsa">
+                Data Structures
+              </NavLink>
+            </li>
           </ul>
           <ul className="filterCourses">
             <li>Pages</li>
