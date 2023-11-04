@@ -13,13 +13,13 @@ CCDb (Course Critique Database) is an online database that contains information 
 Clone the project
 
 ```bash
-  git clone https://github.com/thisisrohitkumar/ccdb.git
+  git clone https://github.com/thisisrohitkumar/ccdb-v2.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd ccdb
+  cd ccdb-v2
 ```
 
 Install dependencies
@@ -28,17 +28,35 @@ Install dependencies
   npm install
 ```
 
-Start the server
+Start the server for React.js
 
 ```bash
-  npm run start
+  npm start
+```
+
+Open new terminal in the project directory
+
+```bash
+  cd backend
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server for Node.js
+
+```bash
+  npm start
 ```
 
 ## Tech Stack
 
-**Client:** React
+**Client:** React.js
 
-**Server:** Node, Express
+**Server:** Node.js, Express.js
 
 **Database:** MongoDB
 
