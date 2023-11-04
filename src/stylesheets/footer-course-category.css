@@ -1,7 +1,7 @@
 .footerCourseCategoryContainer{
     width: 100%;
     background-color: #fff;
-    height: 80vh;
+    height: auto;
     padding: 100px 50px;
     display: flex;
     flex-direction: column;

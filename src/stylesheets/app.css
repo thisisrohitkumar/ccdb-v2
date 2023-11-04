@@ -15,6 +15,7 @@
 @import url(courses.css);
 @import url(course-hero.css);
 @import url(instructors.css);
+@import url(contact.css);
 *{
     margin: 0;
     padding: 0;

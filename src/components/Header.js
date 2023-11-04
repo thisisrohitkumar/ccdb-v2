@@ -45,19 +45,19 @@ const Header = () => {
                     </form>
                 </div>
                 <div className="userBoxContainer">
-                    <span className="userBox" id="userBox" onClick={showUserMenu}>
+                    <span className="userBox hide" id="userBox" onClick={showUserMenu}>
                         <i className="fa-solid fa-circle-user"></i>
                         <plaintext className="username">Username</plaintext>                     
                         <i className="fa-solid fa-caret-down" id="caret"></i>
                     </span>
-                    <span className="userMenu" id="userMenu">
+                    <span className="userMenu hide" id="userMenu">
                         <ul>
                             <li><i class="fa-regular fa-address-card"></i> Dashboard</li>
                             <li><i class="fa-solid fa-star-half-stroke"></i> Your Ratings</li>
                             <li><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</li>
                         </ul>
                     </span>
-                    <span className="userBox hide">
+                    <span className="userBox">
                         <NavLink to='/login' className='reset-a clickToLogin'>LogIn / SignUp</NavLink>
                     </span>
                 </div>
@@ -87,9 +87,9 @@ const Header = () => {
                     </ul>
                     <ul className="ccdbCommunity">
                         <li>CCDb Community</li>
-                        <li onClick={hideDesktopMenu}>About CCDb</li>
-                        <li onClick={hideDesktopMenu}>Contact Us</li>
-                        <li onClick={hideDesktopMenu}><a className="reset-a" href="http://ccdb.in/" target="_blank">Survey Form</a></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/about' className='reset-a'>About CCDb</NavLink></li>
+                        <li onClick={hideDesktopMenu}><NavLink to='/contact' className='reset-a'>Contact Us</NavLink></li>
+                        <li onClick={hideDesktopMenu}><a className="reset-a" href="http://ccdb.in/" target="_blank" rel="noreferrer">Survey Form</a></li>
                     </ul>
                 </div>
             </div>

@@ -8,6 +8,7 @@ import Team from './views/Team'
 import Login from './views/Login'
 import Privacy from './views/Privacy'
 import Error404 from './views/Error404'
+import Contact from './views/Contact'
 import './stylesheets/app.css'
 
 const App = () =>{
@@ -21,6 +22,7 @@ const App = () =>{
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='/instructors' element={<Instructors />} />
                 <Route exact path='/privacy' element={<Privacy />} />
+                <Route exact path='/contact' element={<Contact />} />
                 <Route path='*' element={<Error404 />} />
             </Routes>
         </Router>
