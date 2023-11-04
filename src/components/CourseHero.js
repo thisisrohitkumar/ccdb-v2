@@ -1,22 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-import courseHeroImg from "../resources/assets/images/thumbnails/love-babbar.jpg";
-
-const CourseHero = () => {
+const CourseHero = (props) => {
   return (
     <>
       <section className="courseHeroSection">
         <div className="courseHeroDetails">
           <plaintext className="cc">Love Babbar's</plaintext>
-          <plaintext className="db">Dot Batch</plaintext>
+          <span className="db">
+            <p>{props.courseName}</p>
+          </span>
           <p>
-          A comprehensive program that covers the fundamentals of data structures and algorithms. It includes lectures and exercises to help students design and implement efficient solutions. This course is suitable for beginners and experienced programmers and aims to prepare students for technical interviews and placement exams.
+            {props.courseDesc}
           </p>
           <button><i class="fa-regular fa-star"></i> Rate This Course</button>
         </div>
         <div className="courseHeroImg">
-          <img src={courseHeroImg} alt="Course Hero Image" />
+          <img src={props.courseImg} alt="Hero" />
         </div>
       </section>
     </>

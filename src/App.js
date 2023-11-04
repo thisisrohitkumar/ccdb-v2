@@ -9,6 +9,7 @@ import Login from './views/Login'
 import Privacy from './views/Privacy'
 import Error404 from './views/Error404'
 import Contact from './views/Contact'
+import About from './views/About'
 import './stylesheets/app.css'
 
 const App = () =>{
@@ -16,8 +17,11 @@ const App = () =>{
         <Router>
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route exact path='/about' element={<About />} />
                 <Route exact path='/courses' element={<Courses />} />
-                <Route exact path='/courses-details' element={<CoursesDetails />} />
+                <Route exact path='/courses/:category' element={<Courses />} />
+                {/* <Route exact path='/courses-details' element={<CoursesDetails />} /> */}
+                <Route exact path='/courses-details/:id' element={<CoursesDetails />} />
                 <Route exact path='/team' element={<Team />} />
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='/instructors' element={<Instructors />} />

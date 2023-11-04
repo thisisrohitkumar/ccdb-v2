@@ -1,40 +1,106 @@
-import { React, useEffect } from "react";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { React, useState, useEffect } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import CourseCard from "../components/CourseCard";
-import thumb1 from '../resources/assets/images/thumbnails/love-babbar.jpg'
+import { useParams } from "react-router-dom";
 
-import CourseData from "../rawData/courseData";
+const Courses = () => {
 
-const Courses = () =>{
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  const { category } = useParams();
   
-    return(
-        <>
-            <div className="container">
-                <Header />
-                <div className="courseContainer">
-                    <div className="coursePageHeading">
-                      <h1>All Courses</h1>
-                      <em><i class="fa-solid fa-filter"></i>Filter Courses</em>
-                    </div>
-                    <div className="courseCardContainer">
-                        {CourseData.map((val)=>{
-                            return(<CourseCard
-                                courseImg = {thumb1}
-                                courseRating = {val.rating}
-                                courseName = {val.name}
-                                courseInstructor = {val.instructor}
-                                />)
-                        })}
-                    </div>
-                </div>
-                <Footer />
-            </div>
-        </>
-    )
-}
+  const [data, setData] = useState([])
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    
+    
+      if(category){
+        fetch(`http://localhost:5000/api/courses?sort=-rating&category=${category}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+      }
+      else{
+        fetch(`http://localhost:5000/api/courses?sort=-rating`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+      }
+
+  }, [category]);
+
+  let courseCat = ""
+
+  const checkCategory = () => {
+    if(category === "web")
+      courseCat = "Web Development"
+    else if(category === "operating")
+      courseCat = "Operating System"
+    else if(category === "java")
+      courseCat = "Java"
+    else if(category === "linux")
+      courseCat = "Linux"
+    else if(category === "ai")
+      courseCat = "AI / ML"
+    else if(category === "dsa")
+      courseCat = "Data Structures"
+    else if(category === "ui")
+      courseCat = "UI / UX"
+    else
+      courseCat = "All"
+  }
+
+  checkCategory()
+
+  return (
+    <>
+      <div className="container">
+        <Header />
+        <div className="courseContainer">
+          <div className="coursePageHeading">
+            <h1>{`${courseCat} Courses`}</h1>
+            
+          </div>
+          <div className="courseCardContainer">
+            {data &&
+              data?.courses &&
+              data?.courses?.map((item) => (
+                // <li key={index}>
+                //     {item.rating}
+                // </li>
+
+                <CourseCard
+                  id={item._id} 
+                  courseImg={item.image}
+                  courseRating={item.rating}
+                  courseName={item.course_title}
+                  courseInstructor="Love Babbar"
+                />
+              ))}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
 export default Courses;

@@ -1,14 +1,31 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import InstructorsCard from "./InstructorsCard";
-import ins1 from '../resources/assets/images/instructors/gate.jpg'
-import ins2 from '../resources/assets/images/instructors/love.jpg'
-import ins3 from '../resources/assets/images/instructors/saurabh.jpg'
-import ins4 from '../resources/assets/images/instructors/sharaddha.jpg'
-import ins5 from '../resources/assets/images/instructors/thapa.jpeg'
 
 
 const TopInstructors = () => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    
+        fetch("http://localhost:5000/api/instructors?limit=5&sort=-hearts")
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            // console.log(data.courses[0]);
+            setData(data);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+      }, []);
+
     return(
         <>
             <div className="topInstructorsContainer">
@@ -17,31 +34,16 @@ const TopInstructors = () => {
                     <em><NavLink to='/instructors' className='reset-a'>View all</NavLink></em>
                 </div>
                 <div className="topInstructors">
-                    <InstructorsCard 
-                        instructorsImg = {ins2}
-                        instructorsRating = '543'
-                        instructorsName = 'Love Babbar'    
-                    />
-                    <InstructorsCard 
-                        instructorsImg = {ins3}
-                        instructorsRating = '300'
-                        instructorsName = 'Saurabh Shukla'    
-                    />
-                    <InstructorsCard 
-                        instructorsImg = {ins1}
-                        instructorsRating = '234'
-                        instructorsName = 'Gate Smashers'    
-                    />
-                    <InstructorsCard 
-                        instructorsImg = {ins4}
-                        instructorsRating = '109'
-                        instructorsName = 'Shraddha Khapra'    
-                    />
-                    <InstructorsCard 
-                        instructorsImg = {ins5}
-                        instructorsRating = '88'
-                        instructorsName = 'Vinod Thapa'    
-                    />
+                {data &&
+              data?.instructors &&
+              data?.instructors?.map((item) => (
+
+                <InstructorsCard
+                  instructorsImg={item.image}
+                  instructorsRating={item.hearts}
+                  instructorsName={item.name}
+                />
+              ))}
                 </div>
             </div>
         </>

@@ -27,7 +27,7 @@
     margin-bottom: 50px;
 }
 
-.footerCourseCategory span{
+.footerCourseCategory plaintext{
     background-color: #000;
     padding: 20px;
     width: 300px;
@@ -38,7 +38,7 @@
     transition: all .3s ease;
 }
 
-.footerCourseCategory span:hover{
+.footerCourseCategory plaintext:hover{
     color: #000;
     background-color: #f7f7f7;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

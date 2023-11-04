@@ -1,38 +1,58 @@
-import { React, useEffect } from "react";
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { React, useState, useEffect } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import InstructorsCard from "../components/InstructorsCard";
-import ins1 from '../resources/assets/images/instructors/gate.jpg'
 
-import instructorData from "../rawData/instructorData";
+const Instructors = () => {
+  const [data, setData] = useState([]);
 
-const Instructors = () =>{
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-  
-    return(
-        <>
-            <div className="container">
-                <Header />
-                <div className="instructorContainer">
-                    <div className="instructorPageHeading">
-                      <h1>All Instructors</h1>
-                    </div>
-                    <div className="instructorCardContainer">
-                        {instructorData.map((val)=>{
-                            return(<InstructorsCard
-                                instructorsImg = {ins1}
-                                instructorsRating = {val.hearts}
-                                instructorsName = {val.name}
-                                />)
-                        })}
-                    </div>
-                </div>
-                <Footer />
-            </div>
-        </>
-    )
-}
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    fetch("http://localhost:5000/api/instructors?sort=-hearts")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data.courses[0]);
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  return (
+    <>
+      <div className="container">
+        <Header />
+        <div className="instructorContainer">
+          <div className="instructorPageHeading">
+            <h1>All Instructors</h1>
+          </div>
+          <div className="instructorCardContainer">
+            {data &&
+              data?.instructors &&
+              data?.instructors?.map((item) => (
+                // <li key={index}>
+                //     {item.rating}
+                // </li>
+
+                <InstructorsCard
+                  instructorsImg={item.image}
+                  instructorsRating={item.hearts}
+                  instructorsName={item.name}
+                />
+              ))}
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+};
 
 export default Instructors;

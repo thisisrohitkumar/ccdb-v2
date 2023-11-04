@@ -1,56 +1,59 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CourseCard from "./CourseCard";
-import thumb1 from '../resources/assets/images/thumbnails/love-babbar.jpg'
-import thumb2 from '../resources/assets/images/thumbnails/gate-course.jpg'
-import thumb3 from '../resources/assets/images/thumbnails/saurabh-course.jpg'
-import thumb4 from '../resources/assets/images/thumbnails/shraddha-course.jpg'
-import thumb5 from '../resources/assets/images/thumbnails/thapa-course.jpg'
-
 const TopTen = () => {
+  const [data, setData] = useState([]);
 
-    return(
-        <>
-            <section className="topTenContainer">
-                <div className="topTenHeading">
-                    <h2>Top 5 Courses on CCDb</h2>
-                    <em><NavLink to='/courses' className='reset-a'>View all</NavLink></em>
-                </div>
-                <div className="topTenCourses">
-                    <CourseCard
-                        courseImg = {thumb1}
-                        courseRating = '8.5'
-                        courseName = 'Dot Batch'
-                        courseInstructor = 'Love Babbar'
-                    />
-                    <CourseCard
-                        courseImg = {thumb2}
-                        courseRating = '7.0'
-                        courseName = 'S/W Engineering'
-                        courseInstructor = 'Gate Smashers'
-                    />
-                    <CourseCard
-                        courseImg = {thumb3}
-                        courseRating = '7.9'
-                        courseName = 'Python'
-                        courseInstructor = 'Saurabh Shukla'
-                    />
-                    <CourseCard
-                        courseImg = {thumb4}
-                        courseRating = '8.0'
-                        courseName = 'Java'
-                        courseInstructor = 'Shraddha Khapra'
-                    />
-                    <CourseCard
-                        courseImg = {thumb5}
-                        courseRating = '6.2'
-                        courseName = 'React JS'
-                        courseInstructor = 'Vinod Thapa'
-                    />
-                </div>
-            </section>
-        </>
-    )
-}
+  useEffect(() => {
+    window.scrollTo(0, 0);
 
-export default TopTen
+    fetch("http://localhost:5000/api/courses?sort=-rating&limit=5")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // console.log(data.courses[0]);
+        setData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  return (
+    <>
+      <section className="topTenContainer">
+        <div className="topTenHeading">
+          <h2>Top 5 Courses on CCDb</h2>
+          <em>
+            <NavLink to="/courses" className="reset-a">
+              View all
+            </NavLink>
+          </em>
+        </div>
+        <div className="topTenCourses">
+          {data &&
+            data?.courses &&
+            data?.courses?.map((item) => (
+              // <li key={index}>
+              //     {item.rating}
+              // </li>
+
+              <CourseCard
+                  id={item._id} 
+                  courseImg={item.image}
+                  courseRating={item.rating}
+                  courseName={item.course_title}
+                  courseInstructor="Love Babbar"
+                />
+            ))}
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default TopTen;

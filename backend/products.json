@@ -1,0 +1,85 @@
+
+[{
+    "name":"iphone-13",
+    "price":50999,
+    "features":true,
+    "company":"apple"
+},
+{
+    "name":"iphone-15",
+    "price":79900,
+    "features":true,
+    "company":"apple"
+},
+{
+    "name":"iphone-14",
+    "price":62999,
+    "features":true,
+    "company":"apple"
+},
+{
+    "name":"Redmi 12",
+    "price":11499,
+    "company":"Xiaomi"
+},
+{
+    "name":"Redmi Note 12 Pro",
+    "price":23499,
+    "company":"Xiaomi"
+},
+{
+    "name":"Mi A2",
+    "price":499,
+    "company":"Xiaomi"
+},
+{
+    "name":"oppo reno4 pro",
+    "price":24999,
+    "company":"oppo"
+},
+{
+    "name":"oppo f21",
+    "price":19249,
+    "company":"oppo"
+},
+{
+    "name":"oppo A77s",
+    "price":16499,
+    "company":"oppo"
+},
+{
+    "name":"oneplus nord",
+    "price":21998,
+    "company":"oneplus"
+},
+{
+    "name":"oneplus 11",
+    "price":39999,
+    "company":"oneplus"
+},
+{
+    "name":"oneplus 7 pro",
+    "price":24990,
+    "company":"oneplus"
+},
+{
+    "name":"realme narzo",
+    "price":7999,
+    "company":"realme"
+},
+{
+    "name":"realme C53",
+    "price":11999,
+    "company":"realme"
+},
+{
+    "name":"realme 11 pro",
+    "price":23689,
+    "company":"realme"
+},
+{
+    "name":"realme C55",
+    "price":13999,
+    "company":"realme"
+}
+]
