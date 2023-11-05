@@ -11,10 +11,10 @@ const Slider = () => {
                     </iframe>
                 </div>
                 <span className="scrollPrev">
-                    <i class="fa-solid fa-angle-left"></i>
+                    <i className="fa-solid fa-angle-left"></i>
                 </span>
                 <span className="scrollNext">
-                <i class="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
                 </span>
             </div>
         </>

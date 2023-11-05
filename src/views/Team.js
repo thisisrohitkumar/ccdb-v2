@@ -14,7 +14,7 @@ const Team = () => {
         <Header />
         <div className="ourTeamContainer">
           <div className="ourTeamHeading">
-            <h2>Our Beloved Team <i class="fa-solid fa-heart"></i></h2>
+            <h2>Our Beloved Team <i className="fa-solid fa-heart"></i></h2>
           </div>
           <div className="ourTeam">
 

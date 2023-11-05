@@ -7,7 +7,7 @@ const InstructorsCard = (props) => {
                 <div className="instructorImgContainer">
                     <img src={props.instructorsImg} alt="" />
                 </div>
-                <plaintext className="instructorsRating"><i class="fa-solid fa-heart"></i> {props.instructorsRating}</plaintext>
+                <plaintext className="instructorsRating"><i className="fa-solid fa-heart"></i> {props.instructorsRating}</plaintext>
                 <plaintext className="instructorsName">{props.instructorsName}</plaintext>
             </div>
         </>

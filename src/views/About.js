@@ -101,14 +101,14 @@ const About = () => {
               </li>
             </ol>
           </div>
-          <div class="StackY">
+          <div className="StackY">
             <h2>Tech Stack:</h2>
             <ol>
               <li>
                 <h2>Client</h2>
                 <ul>
                   <li>
-                    <span class="icon">⚛</span> React
+                    <span className="icon">⚛</span> React
                   </li>
                 </ul>
               </li>
@@ -116,10 +116,10 @@ const About = () => {
                 <h2>Server</h2>
                 <ul>
                   <li>
-                    <span class="icon">⚫</span> Node
+                    <span className="icon">⚫</span> Node
                   </li>
                   <li>
-                    <span class="icon">🚀</span> Express
+                    <span className="icon">🚀</span> Express
                   </li>
                 </ul>
               </li>
@@ -127,7 +127,7 @@ const About = () => {
                 <h2>Database</h2>
                 <ul>
                   <li>
-                    <span class="icon">🍃</span> MongoDB
+                    <span className="icon">🍃</span> MongoDB
                   </li>
                 </ul>
               </li>

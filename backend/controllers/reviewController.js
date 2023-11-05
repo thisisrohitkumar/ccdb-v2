@@ -5,7 +5,7 @@ const review = require('../models/reviewschema');
 
 exports.getAllReviews=async(req,res)=>{
    
-    const {rating,user_id,review_text,course_id}=req.query;
+    const {rating,user_id,review_text,course_id, sort, select}=req.query;
     const queryobject={};
   
     if(review_text){
@@ -16,13 +16,13 @@ exports.getAllReviews=async(req,res)=>{
         queryobject.name={$regex:rating,$options:"i"};
         console.log(queryobject);
     }
-    if(user_id){
-        queryobject.name={$regex:user_id,$options:"i"};
-        console.log(queryobject);
-    }
-    if(course_id){
-        queryobject.name={$regex:course_id,$options:"i"};
-        console.log(queryobject);
+    if (user_id) { 
+      queryobject.user_id = user_id; 
+      console.log(queryobject); 
+    } 
+    if (course_id) { 
+      queryobject.course_id = course_id; 
+      console.log(queryobject); 
     }
     
      let apiData=review.find(queryobject);
@@ -41,7 +41,7 @@ exports.getAllReviews=async(req,res)=>{
     //  let page=Number(req.query.page) || 1;
     //  let limit =Number(req.query.limit) || 6;
     //  let skip=(page-1)*limit;
-    //  apiData=apiData.skip(skip).limit(limit);
+    //  apiData=apiData.skip(skip).limit(limit);  
   
   
     const reviews=await apiData;
@@ -54,7 +54,7 @@ exports.createReview = async (req, res) => {
   try {
     const reviews = new review(req.body);
     const savedReview = await reviews.save();
-    res.json(savedReview);
+    res.status(201).json(savedReview);
   } catch (error) {
     res.status(500).json({ error: 'Error creating a review' });
   }

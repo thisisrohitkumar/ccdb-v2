@@ -10,8 +10,8 @@ const Error404 = () =>{
             <div className="container">
                 <Header />
                 <div className="errorContainer">
-                    <plaintext><i class="fa-solid fa-face-sad-tear"></i> Page Not Found</plaintext>
-                    <NavLink to='/' className='reset-a visitHome'><i class="fa-solid fa-house"></i> Visit Home Page</NavLink>
+                    <plaintext><i className="fa-solid fa-face-sad-tear"></i> Page Not Found</plaintext>
+                    <NavLink to='/' className='reset-a visitHome'><i className="fa-solid fa-house"></i> Visit Home Page</NavLink>
                 </div>
                 <Footer />
             </div>

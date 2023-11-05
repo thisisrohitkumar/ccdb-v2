@@ -14,7 +14,7 @@ const Contact = () => {
           <div className="Vmail">
             <a href="mailto:coursecritiquedb@gmail.com">
               <div className="emailContainer">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
                 <p>coursecritiquedb@gmail.com</p>
               </div>
             </a>

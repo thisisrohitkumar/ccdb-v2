@@ -1,25 +1,19 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../stylesheets/login-form.css';
 
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [submitMessage, setSubmitMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate(); // Use the useNavigate hook
+  const navigate = useNavigate();
 
   const isEmailValid = (email) => {
-    // Basic email format validation using regular expression
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
   };
-
-  // const isPasswordValid = (password) => {
-  //   Minimum password length requirement
-  //   return password.length >= 6;
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,6 +35,13 @@ const LoginForm = () => {
 
       if (response.status === 200) {
         setSubmitMessage('Login successful!');
+        // Store user data in session
+        const userData = {
+          email: email,
+          // Add other user data as needed
+        };
+        props.storeUserDataInSession(userData);
+
         // Redirect to the home page or any other protected route
         navigate('/');
       } else {
@@ -51,7 +52,6 @@ const LoginForm = () => {
       setSubmitMessage('Error submitting the form.');
     }
 
-    // Clearing the form after submission
     setEmail('');
     setPassword('');
     setIsLoading(false);

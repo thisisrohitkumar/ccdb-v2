@@ -14,7 +14,7 @@ const Footer = () => {
                 </div>
                 <div className="footerCredits">
                     <plaintext>&copy; 2023 by CCDb.in</plaintext>
-                    <plaintext>Made with <i class="fa-solid fa-heart"></i> by NITKians</plaintext>
+                    <plaintext>Made with <i className="fa-solid fa-heart"></i> by NITKians</plaintext>
                 </div>
             </footer>
         </>

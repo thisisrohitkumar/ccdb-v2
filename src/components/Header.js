@@ -1,9 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import Search from "../components/Search";
 import logo from "../resources/assets/images/logo.png";
 
 const Header = () => {
+  const [userData, setUserData] = useState(null);
+  const navigate = useNavigate()
+  useEffect(() => {
+    // Retrieve user data from session storage
+    const userDataJSON = sessionStorage.getItem("userData");
+    if (userDataJSON) {
+      // Parse the JSON data to get the user object
+      const userData = JSON.parse(userDataJSON);
+      setUserData(userData);
+    }
+  }, []);
+
   const showDesktopMenu = () => {
     const desktopMenu = document.getElementById("desktopMenu");
     desktopMenu.style.transform = "translateY(0%)";
@@ -23,6 +35,11 @@ const Header = () => {
     caret.classList.toggle("flipHorizontal");
   };
 
+  function userLogout(){
+    sessionStorage.removeItem('userData'); // Remove a specific item from session storage
+    navigate(`/`)
+  }
+
   return (
     <>
       <header>
@@ -40,31 +57,36 @@ const Header = () => {
 
         <Search />
 
-        <div className="userBoxContainer">
-          <span className="userBox hide" id="userBox" onClick={showUserMenu}>
-            <i className="fa-solid fa-circle-user"></i>
-            <plaintext className="username">Username</plaintext>
-            <i className="fa-solid fa-caret-down" id="caret"></i>
-          </span>
-          <span className="userMenu hide" id="userMenu">
-            <ul>
-              <li>
-                <i class="fa-regular fa-address-card"></i> Dashboard
-              </li>
-              <li>
-                <i class="fa-solid fa-star-half-stroke"></i> Your Ratings
-              </li>
-              <li>
-                <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
-              </li>
-            </ul>
-          </span>
-          <span className="userBox">
-            <NavLink to="/login" className="reset-a clickToLogin">
-              LogIn / SignUp
-            </NavLink>
-          </span>
-        </div>
+        {userData ? (
+          <div className="userBoxContainer">
+            <span className="userBox" id="userBox" onClick={showUserMenu}>
+              <i className="fa-solid fa-circle-user"></i>
+              <plaintext className="username">{userData.email.toUpperCase()}</plaintext>
+              <i className="fa-solid fa-caret-down" id="caret"></i>
+            </span>
+            <span className="userMenu" id="userMenu">
+              <ul>
+                {/* <li>
+                  <i className="fa-regular fa-address-card"></i> Dashboard
+                </li> */}
+                <li>
+                  <i className="fa-solid fa-star-half-stroke"></i> Your Ratings
+                </li>
+                <li onClick={userLogout}>
+                  <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout
+                </li>
+              </ul>
+            </span>
+          </div>
+        ) : (
+          <div className="userBoxContainer">
+            <span className="userBox">
+              <NavLink to="/login" className="reset-a clickToLogin">
+                LogIn / SignUp
+              </NavLink>
+            </span>
+          </div>
+        )}
       </header>
       <div className="desktopMenu" id="desktopMenu">
         <div className="menuHeader">
@@ -72,7 +94,7 @@ const Header = () => {
             <img src={logo} alt="CCDb Logo" />
           </NavLink>
           <span className="hideDesktopMenu" onClick={hideDesktopMenu}>
-            <i class="fa-solid fa-circle-xmark"></i>
+            <i className="fa-solid fa-circle-xmark"></i>
           </span>
         </div>
         <div className="desktopMenuItems">

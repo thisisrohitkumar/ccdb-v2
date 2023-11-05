@@ -4,6 +4,11 @@ import LoginForm from '../components/LoginForm'
 import brandImg from '../resources/assets/images/login-image.svg'
 
 const Login = () => {
+
+  const storeUserDataInSession = (userData) => {
+    const userDataJSON = JSON.stringify(userData);
+    sessionStorage.setItem('userData', userDataJSON);
+  };
   return (
     <>
       <div className="Lcontainer">
@@ -23,7 +28,7 @@ const Login = () => {
           </div>
         </div>
         <div className="loginFormBox">
-          <LoginForm />
+          <LoginForm storeUserDataInSession={storeUserDataInSession}/>
         </div>
       </div>
       </div>

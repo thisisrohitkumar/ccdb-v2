@@ -11,15 +11,15 @@ const reviewSchema = new mongoose.Schema({
   },
   user_id: {
     type: String, // Change the data type as needed (e.g., String or ObjectId)
-    required: true,
+    required: false,
   },
   course_id: {
     type: String, // Change the data type as needed (e.g., String or ObjectId)
-    required: true,
+    required: false,
   },
   review_text: {
     type: String,
-    required: true,
+    required: false,
   }
 });
 

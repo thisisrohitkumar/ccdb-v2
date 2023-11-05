@@ -1,7 +1,19 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const CourseHero = (props) => {
+
+  const [userData, setUserData] = useState(null);
+  const navigate = useNavigate()
+  useEffect(() => {
+    // Retrieve user data from session storage
+    const userDataJSON = sessionStorage.getItem("userData");
+    if (userDataJSON) {
+      // Parse the JSON data to get the user object
+      const userData = JSON.parse(userDataJSON);
+      setUserData(userData);
+    }
+  }, []);
 
   const removeImgFilter = () => {
     const courseHeroImg = document.getElementById('courseHeroImg')
@@ -11,6 +23,14 @@ const CourseHero = (props) => {
   const addImgFilter = () => {
     const courseHeroImg = document.getElementById('courseHeroImg')
     courseHeroImg.style.filter = 'grayscale(1)'
+  }
+
+  let navigateTo = ''
+  if(userData){
+    navigateTo = `/postreview/${props.courseId}`
+  }
+  else{
+    navigateTo = '/login'
   }
 
   return (
@@ -24,12 +44,12 @@ const CourseHero = (props) => {
           <p>
             {props.courseDesc}
           </p>
-          <NavLink to={`/postreview/${props.courseId}`} className='reset-a'>
+          <NavLink to={navigateTo} className='reset-a'>
           <button
             onMouseOver={removeImgFilter}
             onMouseOut={addImgFilter}
           >
-            <i class="fa-regular fa-star"></i> Rate This Course
+            <i className="fa-regular fa-star"></i> Rate This Course
           </button>
           </NavLink>
         </div>
