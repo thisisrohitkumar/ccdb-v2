@@ -16,7 +16,7 @@ const Hero = () => {
           <NavLink className='reset-a' to='/courses'><button>Explore Courses</button></NavLink>
         </div>
         <div className="heroImg">
-          <img src={heroImg} alt="Hero Image" />
+          <img src={heroImg} alt="Hero" />
         </div>
       </section>
     </>

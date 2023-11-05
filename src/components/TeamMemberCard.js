@@ -7,7 +7,7 @@ const TeamMemberCard = (props) => {
                 <div className="memberImgContainer">
                     <img src={props.memberImg} alt="" />
                 </div>
-                <a href={props.memberLinkedIn} target="_blank" className="memberLinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href={props.memberLinkedIn} target="_blank" rel="noreferrer" className="memberLinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 <plaintext className="memberName">{props.memberName}</plaintext>
                 <plaintext className="memberRole">({props.memberRole})</plaintext>
             </div>

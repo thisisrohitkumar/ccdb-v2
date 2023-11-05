@@ -6,7 +6,7 @@ const Slider = () => {
         <>
             <div className="sliderContainer">
                 <div className="sliderImages" id="sliderImages">
-                    <iframe className="courseTrailer"
+                    <iframe title="yt" className="courseTrailer"
                         src="https://www.youtube.com/embed/Vi9bxu-M-ag">
                     </iframe>
                 </div>

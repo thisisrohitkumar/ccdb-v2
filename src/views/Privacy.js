@@ -27,6 +27,7 @@ const Privacy = () => {
             <a
               href="https://www.freeprivacypolicy.com/free-privacy-policy-generator/"
               target="_blank"
+              rel="noreferrer"
             >
               Free Privacy Policy Generator
             </a>
@@ -127,7 +128,7 @@ const Privacy = () => {
                 accessible from{" "}
                 <a
                   href="https://ccdb.in"
-                  rel="external nofollow noopener"
+                  rel="external nofollow noreferrer"
                   target="_blank"
                 >
                   https://ccdb.in
@@ -255,6 +256,7 @@ const Privacy = () => {
             <a
               href="https://www.freeprivacypolicy.com/blog/sample-privacy-policy-template/#Use_Of_Cookies_And_Tracking"
               target="_blank"
+              rel="noreferrer"
             >
               Free Privacy Policy website
             </a>{" "}
