@@ -1,24 +1,27 @@
 require("dotenv").config();
 const express=require("express");
-const cors = require('cors');
 //instance get kar lete hai
+const bodyParser = require('body-parser');
+require('dotenv').config();
+const app = express();
+const cors = require('cors')
+const PORT=process.env.PORT || 5000;
 
-const app=express();
-
-//create app so that express ki jitni b functionalities or method hai uska use karle
-
+app.use(bodyParser.json({ limit: '50mb' }));
+app.use(bodyParser.urlencoded({ extended: true }));
+const multer = require("multer");
+app.use(multer().any())
 const connectdb=require("./db/connect");
 
-const PORT=process.env.PORT || 5000;
-//jab live host karege toh jo b port avaiable hoga wo chalega but hum simply local 5000 use kar rahe yahe
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
+
 
 //const Product_route=require("./routes/product");
 const courses_routes=require("./routes/courseRoute")
 const instructors_routes=require("./routes/instructorRoute")
+const users_routes=require("./routes/userRoute")
+const review_routes=require("./routes/reviewRoute")
 
 app.get("/",(req,res)=>{
     res.send("hi i m live");
@@ -30,6 +33,8 @@ app.get("/",(req,res)=>{
 //app.js ko batane b zaruri hai  ki new route use kar rahe hai
 app.use("/api/courses",courses_routes)
 app.use("/api/instructors",instructors_routes)
+app.use("/api/users",users_routes)
+app.use("/api/review",review_routes)
 
 const start=async()=>{
     try{

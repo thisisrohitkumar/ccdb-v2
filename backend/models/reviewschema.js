@@ -1,22 +1,3 @@
-// const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-
-// // Define the review schema
-// const reviewSchema = new Schema({
-//   rating: {
-//     type: Number,
-//     required: true
-//   },
-//   reviewText: String,
-//   courseid:,
-//   userid:
-
-// });
-
-// // Create a Review model using the schema
-// const Review = mongoose.model('Review', reviewSchema);
-
-// module.exports = Review;
 
 
 const mongoose = require('mongoose');
@@ -39,11 +20,9 @@ const reviewSchema = new mongoose.Schema({
   review_text: {
     type: String,
     required: true,
-  },
+  }
 });
+
 module.exports = mongoose.model('Review', reviewSchema);
-
-
-
 
 

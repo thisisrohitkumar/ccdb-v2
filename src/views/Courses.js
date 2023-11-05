@@ -92,7 +92,7 @@ const Courses = () => {
                   courseImg={item.image}
                   courseRating={item.rating}
                   courseName={item.course_title}
-                  courseInstructor="Love Babbar"
+                  courseInstructor={item.instructor_name}
                 />
               ))}
           </div>

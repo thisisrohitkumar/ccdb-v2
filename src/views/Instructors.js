@@ -37,11 +37,9 @@ const Instructors = () => {
             {data &&
               data?.instructors &&
               data?.instructors?.map((item) => (
-                // <li key={index}>
-                //     {item.rating}
-                // </li>
 
                 <InstructorsCard
+                  
                   instructorsImg={item.image}
                   instructorsRating={item.hearts}
                   instructorsName={item.name}

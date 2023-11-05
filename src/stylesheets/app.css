@@ -18,6 +18,10 @@
 @import url(contact.css);
 @import url(about.css);
 @import url(search.css);
+@import url(login.css);
+@import url(login-form.css);
+@import url(signup.css);
+@import url(post-review.css);
 *{
     margin: 0;
     padding: 0;
@@ -34,6 +38,9 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #f7f7f7;
     overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .show{

@@ -22,10 +22,12 @@
     width: 200px;
     border-radius: 50%;
     transition: all .3s ease;
+    filter: grayscale(1);
 }
 
 .memberImgContainer img:hover{
     transform: scale(1.2);
+    filter: grayscale(0);
 }
 .memberLinkedIn{
     margin-top: 10px;

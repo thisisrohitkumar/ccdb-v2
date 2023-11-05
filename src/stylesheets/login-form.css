@@ -1,0 +1,81 @@
+.loginFormContainer{
+    padding: 50px 80px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loginFormContainer h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.loginFormContainer div{
+    margin-bottom: 15px;
+}
+
+.loginFormContainer div:last-of-type{
+    margin-bottom: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.loginFormContainer input[type=text], input[type=email], input[type=password]{
+    font-size: 20px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    margin-top: 5px;
+}
+
+button[type=submit]{
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    width: 100%;
+    border: 1px solid #000;
+    outline: none;
+    margin-top: 5px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type=radio]{
+    margin-top: 10px;
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+.radioLabel{
+    margin-right: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+}
+
+.submitMsg{
+    width: 100%;
+    text-align: center;
+    height: 20px;
+    color: red;
+}
+
+
+@media screen and (max-width: 786px){
+    .loginFormContainer{
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    .loginFormContainer h3{
+        font-size: 25px;
+    }
+}

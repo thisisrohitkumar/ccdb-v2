@@ -34,14 +34,13 @@ const CourseDetails = () =>{
                 {data &&
               data?.courses &&
               data?.courses?.map((item) => (
-                // <li key={index}>
-                //     {item.rating}
-                // </li>
 
                 <CourseHero
+                    courseId = {item._id}
                     courseName = {item.course_title}
                     courseDesc = {item.description}
                     courseImg = {item.image}
+                    courseInstructor = {item.instructor_name}
                 />
               ))}
                 </div>

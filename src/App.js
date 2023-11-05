@@ -5,12 +5,14 @@ import Courses from './views/Courses'
 import CoursesDetails from './views/CourseDetails'
 import Instructors from './views/Instructors'
 import Team from './views/Team'
-import Login from './views/Login'
 import Privacy from './views/Privacy'
 import Error404 from './views/Error404'
 import Contact from './views/Contact'
 import About from './views/About'
+import Login from './views/Login'
+import Signup from './views/Signup'
 import './stylesheets/app.css'
+import PostReview from './views/PostReview'
 
 const App = () =>{
     return(
@@ -23,10 +25,12 @@ const App = () =>{
                 {/* <Route exact path='/courses-details' element={<CoursesDetails />} /> */}
                 <Route exact path='/courses-details/:id' element={<CoursesDetails />} />
                 <Route exact path='/team' element={<Team />} />
-                <Route exact path='/login' element={<Login />} />
                 <Route exact path='/instructors' element={<Instructors />} />
                 <Route exact path='/privacy' element={<Privacy />} />
                 <Route exact path='/contact' element={<Contact />} />
+                <Route exact path='/login' element={<Login />} />
+                <Route exact path='/signup' element={<Signup />} />
+                <Route exact path='/postreview/:id' element={<PostReview />} />
                 <Route path='*' element={<Error404 />} />
             </Routes>
         </Router>

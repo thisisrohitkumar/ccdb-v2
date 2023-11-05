@@ -3,12 +3,15 @@ const Schema = mongoose.Schema;
 
 // Define the course schema
 const courseSchema = new Schema({
-  course_title: 
-  {
+  course_title:{
     type: String,
     required: true
   },
   category:{
+    type: String,
+    required: true
+  },
+  instructor_name:{
     type: String,
     required: true
   },

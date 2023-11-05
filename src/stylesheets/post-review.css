@@ -1,0 +1,59 @@
+.postReviewFormContainer{
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.postReviewFormContainer form{
+    /* background-color: aqua; */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.postReviewFormContainer textarea{
+    resize: none;
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.postReviewFormContainer h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.rating-form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.rating-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.rating-input {
+    display: inline-block;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+.postReviewFormContainer i{
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
