@@ -50,7 +50,7 @@ const SignupForm = () => {
     };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/signup', signupFormData);
+      const response = await axios.post('https://ccdbapi.onrender.com/api/users/signup', signupFormData);
 
       if (response.status === 201) {
         setSubmitMessage('Account created successfully!');

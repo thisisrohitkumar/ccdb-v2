@@ -15,7 +15,7 @@ const Courses = () => {
     
     
       if(category){
-        fetch(`http://localhost:5000/api/courses?sort=-rating&category=${category}`)
+        fetch(`https://ccdbapi.onrender.com/api/courses?sort=-rating&category=${category}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -30,7 +30,7 @@ const Courses = () => {
       });
       }
       else{
-        fetch(`http://localhost:5000/api/courses?sort=-rating`)
+        fetch(`https://ccdbapi.onrender.com/api/courses?sort=-rating`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

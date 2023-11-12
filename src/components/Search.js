@@ -8,7 +8,7 @@ const Search = () => {
 
   const handleSearch = (query) => {
 
-    fetch(`http://localhost:5000/api/courses?course_title=${query}`)
+    fetch(`https://ccdbapi.onrender.com/api/courses?course_title=${query}`)
         .then((response) => {
           if (!response.ok) {
             throw new Error("Network response was not ok");

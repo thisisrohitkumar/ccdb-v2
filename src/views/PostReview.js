@@ -42,7 +42,7 @@ const PostReview = () => {
     try {
       console.log(formData);
       const response = await axios.post(
-        "http://localhost:5000/api/review", // Replace with your backend API endpoint
+        "https://ccdbapi.onrender.com/api/review", // Replace with your backend API endpoint
         formData
       );
 

@@ -10,7 +10,7 @@ const TopInstructors = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     
-        fetch("http://localhost:5000/api/instructors?limit=5&sort=-hearts")
+        fetch("https://ccdbapi.onrender.com/api/instructors?limit=5&sort=-hearts")
           .then((response) => {
             if (!response.ok) {
               throw new Error("Network response was not ok");

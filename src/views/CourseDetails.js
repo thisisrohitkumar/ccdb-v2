@@ -13,7 +13,7 @@ const CourseDetails = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-    fetch(`http://localhost:5000/api/courses?_id=${id}`)
+    fetch(`https://ccdbapi.onrender.com/api/courses?_id=${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -27,7 +27,7 @@ const CourseDetails = () => {
         console.error("Error fetching data:", error);
       });
 
-    fetch(`http://localhost:5000/api/review?course_id=${id}`)
+    fetch(`https://ccdbapi.onrender.com/api/review?course_id=${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
