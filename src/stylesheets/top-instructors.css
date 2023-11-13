@@ -28,4 +28,28 @@
     display: flex;
     flex-direction: row;
     column-gap: 50px;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+    .topInstructorsContainer {
+        padding: 50px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .topInstructorsHeading {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .topInstructorsHeading h2 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .topInstructors {
+        flex-direction: column; /* Stack instructors vertically on smaller screens */
+        column-gap: 20px; /* Adjust the gap between instructors for smaller screens */
+    }
 }

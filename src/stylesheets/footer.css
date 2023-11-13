@@ -33,3 +33,32 @@ footer{
     flex-direction: row;
     column-gap: 100px;
 }
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+    footer {
+        padding: 30px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .footerMenu ul {
+        text-align: center; /* Center-align menu items on smaller screens */
+    }
+
+    .footerMenu ul li {
+        display: block; /* Stack menu items vertically on smaller screens */
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .footerMenu ul li:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .footerCredits {
+        flex-direction: column; /* Stack credits vertically on smaller screens */
+        column-gap: 20px;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center; /* Adjust the gap between credits for smaller screens */
+    }
+}

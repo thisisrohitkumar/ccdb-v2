@@ -48,3 +48,20 @@
 .footerCourseCategory span:active{
     transform: translateY(0);
 }
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+    .footerCourseCategory {
+        flex-direction: column; /* Stack categories vertically on smaller screens */
+        margin-bottom: 0;
+    }
+
+    .footerCourseCategory plaintext {
+        width: 100%; /* Full width for categories on smaller screens */
+        margin-bottom: 20px; /* Adjust margin between categories for smaller screens */
+    }
+
+    .footerCourseCategoryHeading h2{
+        font-size:1.5rem;
+    }
+}

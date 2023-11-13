@@ -36,3 +36,9 @@
     row-gap: 50px;
     justify-content: center;
 }
+
+@media screen and (max-width: 600px){
+    .ourTeamHeading h2{
+        font-size: 1.5rem;
+    }
+}

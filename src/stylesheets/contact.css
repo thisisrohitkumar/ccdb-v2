@@ -37,3 +37,17 @@
   align-items: center;
   gap: 30px;
 }
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+  .contactContainer {
+    padding-top: 150px; /* Adjust padding for smaller screens */
+    padding-bottom: 100px; /* Adjust padding for smaller screens */
+  }
+
+  .Vmail {
+    width: 80%; /* Adjust width for smaller screens */
+    height: auto;
+    padding: 50px; /* Remove fixed height for smaller screens */
+  }
+}

@@ -101,6 +101,14 @@ header{
     font-size: 1rem;
 }
 
+.clickToLoginMob{
+    background-color: #fff;
+    padding: 5px 15px;
+    color: #000 !important;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
 .desktopMenu{
     width: 100vw;
     height: 100vh;
@@ -157,5 +165,60 @@ header{
     transform: translateX(0);
     transition: none;
     cursor: text;
+}
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+
+    header{
+        padding: 15px 20px 10px 20px;
+        justify-content: space-between;
+        /* background-color: red; */
+    }
+
+    .desktopMenuIcon plaintext{
+        display: none;
+    }
+
+    .logo img{
+        width: 100px;
+    }
+
+    .clickToLogin{
+        display: none;
+    }
+
+    .userBox{
+        display: none;
+    }
+
+    .userBoxContainer{
+        display: none;
+    }
+
+    .menuHeader{
+        position: fixed;
+        top: 30px;
+        width: 85%;
+        /* background-color: #fff; */
+    }
+
+    .desktopMenu{
+        padding: 150px 30px 100px 30px;
+        overflow-y: scroll;
+    }
+
+    .desktopMenu img{
+        width: 100px;
+    }
+
+    .desktopMenuItems{
+        flex-direction: column-reverse;
+        row-gap: 50px;
+    }
+
+    .hideDesktopMenu i{
+        font-size: 2rem;
+    }
 }
 

@@ -53,3 +53,36 @@
 .heroImg img{
     width: 100%;
 }
+
+/* Media query for screens up to 600px wide (typical mobile screens) */
+@media screen and (max-width: 600px) {
+    .heroSection {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 150px 20px 50px 20px;
+        row-gap: 50px;
+        height: auto; /* Adjust padding for smaller screens */
+    }
+
+    .heroDetails{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .heroDetails p {
+        width: 100%; /* Full width for text on smaller screens */
+        padding: 10px;
+    }
+
+    .cc{
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    
+    .db{
+        font-size: 4rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    
+}

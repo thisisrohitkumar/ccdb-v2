@@ -77,8 +77,11 @@
         height: auto;
         flex-direction: column;
         row-gap: 50px;
+        box-shadow: none;
     }
-
+    .signupBrandBox{
+        display: none;
+    }
     .signupBrandNameImg img{
         width: 55px;
         height: 55px;
