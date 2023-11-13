@@ -25,10 +25,8 @@ exports.getAllinstructors=async(req,res)=>{
       apiData=apiData.select(selectfix);
    }
 
-  //  let page=Number(req.query.page) || 1;
-  //  let limit =Number(req.query.limit) || 6;
-  //  let skip=(page-1)*limit;
-  //  apiData=apiData.skip(skip).limit(limit);
+   let limit =Number(req.query.limit) || 5;
+   apiData=apiData.limit(limit);
 
 
   const instructors=await apiData;
