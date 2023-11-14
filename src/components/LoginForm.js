@@ -49,7 +49,7 @@ const LoginForm = (props) => {
       }
     } catch (error) {
       console.error('API Error:', error);
-      setSubmitMessage('Error submitting the form.');
+      setSubmitMessage('Failed to Login');
     }
 
     setEmail('');

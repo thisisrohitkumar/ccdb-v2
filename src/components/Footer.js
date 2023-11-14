@@ -7,9 +7,9 @@ const Footer = () => {
             <footer>
                 <div className="footerMenu">
                     <ul>
-                        <li><NavLink className='reset-a' to='/privacy'>Privacy Policy</NavLink></li>
-                        <li><NavLink className='reset-a' to='/'>Site Map</NavLink></li>
+                        <li><NavLink className='reset-a' to='/'>Home</NavLink></li>
                         <li><NavLink className='reset-a' to='/team'>Our Team</NavLink></li>
+                        <li><NavLink className='reset-a' to='/privacy'>Privacy Policy</NavLink></li>
                     </ul>
                 </div>
                 <div className="footerCredits">

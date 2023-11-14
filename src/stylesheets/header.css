@@ -103,10 +103,11 @@ header{
 
 .clickToLoginMob{
     background-color: #fff;
-    padding: 5px 15px;
+    padding: 5px 10px;
     color: #000 !important;
     border-radius: 10px;
     font-size: 1rem;
+    margin-left: -5px;
 }
 
 .desktopMenu{

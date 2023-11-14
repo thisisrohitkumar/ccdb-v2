@@ -1,0 +1,9 @@
+.dashboardContainer{
+    padding: 150px 50px;
+}
+.viewCourseLink{
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-left: -5px;
+}

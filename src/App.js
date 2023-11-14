@@ -13,12 +13,14 @@ import Login from './views/Login'
 import Signup from './views/Signup'
 import './stylesheets/app.css'
 import PostReview from './views/PostReview'
+import Dashboard from './views/Dashboard'
 
 const App = () =>{
     return(
         <Router>
             <Routes>
                 <Route exact path='/' element={<Home />} />
+                <Route exact path='/dashboard' element={<Dashboard />} />
                 <Route exact path='/about' element={<About />} />
                 <Route exact path='/courses' element={<Courses />} />
                 <Route exact path='/courses/:category' element={<Courses />} />

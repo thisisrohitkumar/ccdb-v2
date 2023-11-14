@@ -7,7 +7,7 @@ import axios from "axios"; // Import axios
 const PostReview = () => {
   const [userData, setUserData] = useState(null);
   const { id } = useParams();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   // "rating": 3.6,
   // "user_id": "65468726f336c9891bb27aa2",
   // "course_id": "65476cfb274256b697b3e0af",
@@ -42,7 +42,7 @@ const PostReview = () => {
     try {
       console.log(formData);
       const response = await axios.post(
-        "https://ccdbapi.onrender.com/api/review", // Replace with your backend API endpoint
+        "https://ccdbapi.onrender.com/api/review",
         formData
       );
 
@@ -50,7 +50,7 @@ const PostReview = () => {
         // Handle success, e.g., redirect or display a success message
         console.log("Review posted successfully");
         // console.log(response.data);
-        navigate(`/courses-details/${id}`)
+        navigate(`/courses-details/${id}`);
       } else {
         // Handle other response codes as needed
         console.error("Error:", response.data);

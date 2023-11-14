@@ -67,8 +67,9 @@
 @media screen and (max-width: 600px) {
     .courseHeroSection {
         flex-direction: column-reverse; /* Stack items vertically on smaller screens */
-        padding: 50px 20px;
+        padding: 200px 30px 30px 30px;
         row-gap: 50px; /* Adjust padding for smaller screens */
+        height: auto;
     }
 
     .courseHeroDetails .cc{
@@ -78,6 +79,10 @@
 
     .courseHeroDetails .db{
         font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .courseHeroDetails p{
         width: 100%;
     }
 

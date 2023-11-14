@@ -65,7 +65,7 @@ const Header = () => {
             <span className="userMenu" id="userMenu">
               <ul>
                 <li>
-                  <i className="fa-solid fa-star-half-stroke"></i> Your Ratings
+                  <NavLink className='reset-a' to='/dashboard'><i class="fa-regular fa-id-badge"></i> Dashboard</NavLink>
                 </li>
                 <li onClick={userLogout}>
                   <i className="fa-solid fa-arrow-right-from-bracket"></i> Logout

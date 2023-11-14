@@ -24,6 +24,7 @@
 @import url(post-review.css);
 @import url(review.css);
 @import url(course-details.css);
+@import url(dashboard.css);
 *{
     margin: 0;
     padding: 0;
