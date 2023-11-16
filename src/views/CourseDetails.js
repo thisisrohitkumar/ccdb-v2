@@ -56,6 +56,7 @@ const CourseDetails = () => {
                 courseDesc={item.description}
                 courseImg={item.image}
                 courseInstructor={item.instructor_name}
+                courseRating={item.rating}
               />
             ))}
         </div>

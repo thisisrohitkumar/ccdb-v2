@@ -44,6 +44,8 @@ const CourseHero = (props) => {
           <p>
             {props.courseDesc}
           </p>
+          <plaintext className="courseRating"><i className="fa-solid fa-star"> {props.courseRating}</i>/10</plaintext>
+          <br />
           <NavLink to={navigateTo} className='reset-a'>
           <button
             onMouseOver={removeImgFilter}
